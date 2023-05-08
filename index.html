@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digi Dove</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    
+    <div class="container-fluid w-100 h-100">
+
+        <div class="row my-4">
+            <div class="col-md-8 col-lg-8 offset-md-2 offset-lg-2">
+                <h1 class="text-center">My Dove</h1>
+            </div>
+        </div>
+        
+        
+        <main>
+            <div class="row">
+                <div class="col-md-8 col-lg-8 offset-md-2 offset-lg-2">
+                
+                    <form action="">
+                        <div class="centerkan">
+                            <select name="method" id="methodSelect" title="Select method" class="w10">
+                                <option value="GET">GET</option>
+                                <option value="POST">POST</option>
+                                <option value="PUT">PUT</option>
+                                <option value="DELETE">DELETE</option>
+                            </select>
+                            <input type="text" name="url" required autofocus id="urlInp" title="Type URL of RestAPI Server here" placeholder="RestAPI Server URL" class="w80 mx-2">
+                            <button type="submit" id="submit" class="w10 btn btn-primary">Send</button>
+                        </div>                    
+                    </form>
+
+                </div>            
+            </div>
+
+            <div class="row my-2">
+                <div class="col-md-8 col-lg-8 offset-md-2 offset-lg-2">
+                    <button type="button" class="btn btn-success" title="Add Params" id="addParamsBtn" data-clicked="0">Add Parameters</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 col-lg-8 offset-md-2 offset-lg-2">
+                    <form action="" id="paramsForm" class="w-100 centerkan">
+                        <table class="w-100" id="tableParams">                                                                                        
+                            <!-- Row appeared by JS -->
+                        </table>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row my-4">
+                <div class="col-md-8 col-lg-8 offset-md-2 offset-lg-2">
+                    <h3>Response</h3>
+                    <pre id="myResp" class="bg-dark text-white p-3">
+
+                    </pre>
+                </div>
+            </div>
+            
+        </main>
+        
+
+    </div>
+
+    <script src="../bootstrap/js/jQuery/jquery-3.6.1.min.js"></script>
+    <script src="../bootstrap/js/popper.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
+    

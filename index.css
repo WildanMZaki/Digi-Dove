@@ -1,0 +1,27 @@
+.centerkan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.w10 {width: 10%;}
+.w20 {width: 20%;}
+.w30 {width: 30%;}
+.w40 {width: 40%;}
+.w60 {width: 60%;}
+.w70 {width: 70%;}
+.w80 {width: 80%;}
+.w90 {width: 90%;}
+
+#methodSelect, #urlInp, #submit {
+    font-size: 1.2rem;
+}
+
+#myResp {min-width: 30vh;}
+.bgdis {
+    background-color: #eee;
+}
+
+.btn-orange { background-color: orange; }
+.btn-orange:hover { background-color: rgb(209, 140, 11); }
+.btn-orange:click { background-color: rgb(233, 190, 112); }
