@@ -1,5 +1,7 @@
 var counter = 0;
 var rowMembers = [];
+let bearer;
+let basic;
 
 $('#submit').click((e) => {
     e.preventDefault();
@@ -42,14 +44,20 @@ function sendAJAX(request){
         type: request.method,
         data: request.data,
         dataType: request.dataType,
+        headers: {
+            'Authorization': bearer ? `Bearer ${bearer}` : (basic ? `Basic ${basic}` : ''),
+        },
         success: function(data, textStatus, jqXHR)
         {
             console.log(data);            
-            $('#myResp').html(jqXHR.responseText)
+            $('#myResp').get(0).textContent = JSON.stringify(data, null, 2);
+            // $('#myResp').html(jqXHR.responseText)
         },
         error: function (jqXHR, textStatus, errorThrown)
         {
-            $('#myResp').html(jqXHR.responseText)
+            const erorr = JSON.parse(jqXHR.responseText);
+            $('#myResp').get(0).textContent = JSON.stringify(erorr, null, 2);
+
             // alert('Error');        
             // console.log(jqXHR.responseText, '\n', textStatus, '\n', errorThrown);            
         }
